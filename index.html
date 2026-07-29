@@ -79,6 +79,8 @@
             p {
                 font-size: 14px;
                 color: #cccccc;
+                margin-top: 0;
+                margin-bottom: 15px;
             }
 
             ul {
@@ -99,6 +101,32 @@
 
             a:hover {
                 text-decoration: underline;
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    padding: 20px 15px;
+                }
+                
+                section {
+                    padding: 20px 15px;
+                }
+
+                p, li {
+                    font-size: 15px; 
+                    line-height: 1.8;
+                    margin-bottom: 20px; 
+                    text-align: left;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+
+                header p {
+                    line-height: 1.5;
+                }
             }
         </style>
     </head>
@@ -156,7 +184,7 @@
                     <br>
                     <li>
                         <strong>AI-Powered Discord Assistant</strong> — <a href="https://github.com/karthikr06/TickDroid" target="_blank">View Code</a><br>
-                        An asynchronous Python bot built using `discord.py`. Features multi-modal interactions powered by Google Gemini and Text & Audio summary for files.
+                        An asynchronous Python bot built using discord.py. Features multi-modal interactions powered by Google Gemini and Text & Audio summary for files.
                     </li>
                 </ul>
             </section>
