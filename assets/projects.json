@@ -1,0 +1,26 @@
+[
+  {
+    "title": "TabWriter Text Editor",
+    "description": "A lightweight, distraction-free multi-tab text editor built for Windows 11 using WinUI 3 and C#. Published to the Microsoft Store via MSIX packaging.",
+    "links": [
+      {
+        "text": "View in Store",
+        "url": "https://apps.microsoft.com/detail/9p4dzl11whv5"
+      },
+      {
+        "text": "GitHub",
+        "url": "https://github.com/karthikr06/TabWriter"
+      }
+    ]
+  },
+  {
+    "title": "AI-Powered Discord Assistant",
+    "description": "An asynchronous Python bot built using discord.py. Features multi-modal interactions powered by Google Gemini and Text & Audio summary for files.",
+    "links": [
+      {
+        "text": "View Code",
+        "url": "https://github.com/karthikr06/TickDroid"
+      }
+    ]
+  }
+]
