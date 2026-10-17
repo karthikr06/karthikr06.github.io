@@ -1,6 +1,6 @@
 [
   {
-    "title": "SideStack Social",
+    "title": "SideStack",
     "stack": "C#, .NET 8, WinUI 3, WebView2, SQLite",
     "description": "A native Windows 11 app that puts 20+ web apps in one window. Each app gets its own isolated WebView2 profile, so you can stay logged into multiple accounts of the same service. Also has native notifications, per-app camera/mic permissions, and alarms and reminders that still ring when the app is closed. Packaged as an MSIX for the Microsoft Store.",
     "links": [
