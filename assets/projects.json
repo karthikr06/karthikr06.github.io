@@ -1,20 +1,20 @@
 [
   {
-    "title": "SyncViewer",
-    "stack": "React, FastAPI, PostgreSQL (Supabase), Google ADK",
-    "description": "A multi-cloud VM monitoring platform with an offline-first React PWA. Runs on a 20-table Postgres schema with row-level security and audit logs, and syncs changes to each browser's IndexedDB cache using version cursors. Includes a Gemini-powered agent you can ask about uptime, plus team workspaces with admin, developer and viewer roles.",
-    "links": []
-  },
-  {
     "title": "SideStack Social",
     "stack": "C#, .NET 8, WinUI 3, WebView2, SQLite",
     "description": "A native Windows 11 app that puts 20+ web apps in one window. Each app gets its own isolated WebView2 profile, so you can stay logged into multiple accounts of the same service. Also has native notifications, per-app camera/mic permissions, and alarms and reminders that still ring when the app is closed. Packaged as an MSIX for the Microsoft Store.",
     "links": [
       {
-        "text": "Website",
+        "text": "Visit Website",
         "url": "https://karthikr06.github.io/SideStackApp/"
       }
     ]
+  },
+  {
+    "title": "SyncViewer",
+    "stack": "React, FastAPI, PostgreSQL (Supabase), Google ADK",
+    "description": "A multi-cloud VM monitoring platform with an offline-first React PWA. Runs on a 20-table Postgres schema with row-level security and audit logs, and syncs changes to each browser's IndexedDB cache using version cursors. Includes a Gemini-powered agent you can ask about uptime, plus team workspaces with admin, developer and viewer roles.",
+    "links": []
   },
   {
     "title": "TabWriter Text Editor",
@@ -34,7 +34,7 @@
   {
     "title": "AI-Powered Discord Assistant",
     "stack": "Python, Discord.py, Gemini, Sarvam AI, Azure",
-    "description": "An asynchronous Python bot built using discord.py. Handles text, voice and speech translation through Google Gemini and Sarvam AI, and uses Azure Text-to-Speech to turn messages and files into audio summaries. Hosted on an Azure VM.",
+    "description": "An asynchronous Python bot built using discord.py. Handles text, voice and speech translation through Google Gemini and Sarvam AI, and uses Azure Text-to-Speech to turn messages and files into audio summaries.",
     "links": [
       {
         "text": "View Code",

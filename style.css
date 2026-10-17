@@ -83,6 +83,13 @@ body {
     margin: 0 0 10px 0;
 }
 
+.headline {
+    font-size: 15px;
+    color: var(--text-primary);
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
 .tagline {
     font-size: 14px;
     color: var(--text-secondary);
