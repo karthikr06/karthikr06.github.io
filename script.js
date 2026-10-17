@@ -31,9 +31,14 @@ async function loadProjects() {
                 linksHTML = ` — ${linkElements.join('<span class="project-links-separator">|</span>')}`;
             }
 
+            const stackHTML = project.stack
+                ? `<span class="project-stack">${project.stack}</span>`
+                : '';
+
             const projectItem = `
                 <li>
                     <strong>${project.title}</strong>${linksHTML}<br>
+                    ${stackHTML}
                     ${project.description}
                 </li>
             `;

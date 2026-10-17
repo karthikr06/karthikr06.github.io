@@ -83,6 +83,13 @@ body {
     margin: 0 0 10px 0;
 }
 
+.headline {
+    font-size: 15px;
+    color: var(--text-primary);
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
 .tagline {
     font-size: 14px;
     color: var(--text-secondary);
@@ -206,6 +213,21 @@ a:hover {
     color: var(--border-color);
     margin: 0 6px;
     font-weight: normal;
+}
+
+/* --- PROJECT TECH STACK --- */
+.project-stack {
+    display: block;
+    color: var(--accent-blue-hover);
+    font-size: 13px;
+    margin: 2px 0 4px 0;
+}
+
+/* --- EXPERIENCE DATE --- */
+.exp-date {
+    color: var(--accent-blue-hover);
+    font-size: 13px;
+    margin-left: 6px;
 }
 
 /* --- BLOGS & ARTICLES SECTION --- */
