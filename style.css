@@ -208,6 +208,21 @@ a:hover {
     font-weight: normal;
 }
 
+/* --- PROJECT TECH STACK --- */
+.project-stack {
+    display: block;
+    color: var(--accent-blue-hover);
+    font-size: 13px;
+    margin: 2px 0 4px 0;
+}
+
+/* --- EXPERIENCE DATE --- */
+.exp-date {
+    color: var(--accent-blue-hover);
+    font-size: 13px;
+    margin-left: 6px;
+}
+
 /* --- BLOGS & ARTICLES SECTION --- */
 .blog-grid {
     display: grid;
