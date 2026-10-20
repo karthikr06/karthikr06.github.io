@@ -11,15 +11,45 @@ if (currentHour < 12) {
 }
 
 // --- PROJECTS LOGIC ---
+function generateAppCard(app) {
+    const highlightsHTML = (app.highlights || [])
+        .map(item => `<li>${item}</li>`)
+        .join('');
+
+    return `
+        <a href="${app.url}" target="_blank" class="app-card" style="--app-accent: ${app.accent};">
+            <div class="app-card-header">
+                <img src="./assets/apps/${app.icon}" alt="${app.title} icon" class="app-icon">
+                <div>
+                    <h3>${app.title}</h3>
+                    <span class="project-stack">${app.stack}</span>
+                </div>
+            </div>
+            <p class="app-tagline">${app.tagline}</p>
+            <p class="app-description">${app.description}</p>
+            <ul class="app-highlights">${highlightsHTML}</ul>
+            <div class="app-cta">${app.cta} <i class="fa fa-arrow-right"></i></div>
+        </a>
+    `;
+}
+
 async function loadProjects() {
+    const featuredContainer = document.getElementById('featured-container');
     const projectsContainer = document.getElementById('projects-container');
     try {
         const response = await fetch('./assets/projects.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const projects = await response.json();
-        
+        const allProjects = await response.json();
+
+        // Featured apps get their own cards at the top
+        featuredContainer.innerHTML = allProjects
+            .filter(project => project.featured)
+            .map(generateAppCard)
+            .join('');
+
+        const projects = allProjects.filter(project => !project.featured);
         projectsContainer.innerHTML = ''; // Clear loading text
-        
+
         projects.forEach(project => {
             // Create the links HTML if links exist
             let linksHTML = '';
@@ -46,6 +76,11 @@ async function loadProjects() {
         });
     } catch (error) {
         console.error("Failed to load projects:", error);
+        featuredContainer.innerHTML = `
+            <p style="color: var(--text-secondary);">
+                Check out <a href="https://karthikr06.github.io/SideStackApp/" target="_blank">SideStack</a> and <a href="https://apps.microsoft.com/detail/9p4dzl11whv5" target="_blank">TabWriter</a>.
+            </p>
+        `;
         projectsContainer.innerHTML = `
             <li style="list-style: none; color: var(--text-secondary);">
                 Check out my projects on <a href="https://github.com/karthikr06" target="_blank">GitHub</a>.

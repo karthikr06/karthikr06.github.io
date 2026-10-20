@@ -1,35 +1,33 @@
 [
   {
     "title": "SideStack",
+    "featured": true,
+    "url": "https://karthikr06.github.io/SideStackApp/",
+    "cta": "Visit website",
+    "icon": "sidestack.svg",
+    "accent": "#7c5cff",
+    "tagline": "All your apps, one window.",
     "stack": "C#, .NET 8, WinUI 3, WebView2, SQLite",
-    "description": "A native Windows 11 app that puts 20+ web apps in one window. Each app gets its own isolated WebView2 profile, so you can stay logged into multiple accounts of the same service. Also has native notifications, per-app camera/mic permissions, and alarms and reminders that still ring when the app is closed. Packaged as an MSIX for the Microsoft Store.",
-    "links": [
-      {
-        "text": "Visit Website",
-        "url": "https://karthikr06.github.io/SideStackApp/"
-      }
-    ]
+    "description": "WhatsApp, Telegram, Discord, Gmail and more, side by side in one native Windows 11 app. Keep work and personal accounts apart, get proper notifications, and set alarms that ring even when the app is closed.",
+    "highlights": ["Separate profiles", "Native notifications", "No data collected"]
+  },
+  {
+    "title": "TabWriter",
+    "featured": true,
+    "url": "https://apps.microsoft.com/detail/9p4dzl11whv5",
+    "cta": "Get it from Microsoft Store",
+    "icon": "tabwriter.png",
+    "accent": "#f59e0b",
+    "tagline": "A distraction-free tabbed text editor.",
+    "stack": "C#, WinUI 3, Windows App SDK",
+    "description": "A lightweight text editor built from scratch for Windows 11. Native tabs, custom fonts, word wrap and quick timestamped backups, all working completely offline.",
+    "highlights": ["Native tabs", "Quick backups", "Fully offline"]
   },
   {
     "title": "SyncViewer",
     "stack": "React, FastAPI, PostgreSQL (Supabase), Google ADK",
     "description": "A multi-cloud VM monitoring platform with an offline-first React PWA. Runs on a 20-table Postgres schema with row-level security and audit logs, and syncs changes to each browser's IndexedDB cache using version cursors. Includes a Gemini-powered agent you can ask about uptime, plus team workspaces with admin, developer and viewer roles.",
     "links": []
-  },
-  {
-    "title": "TabWriter Text Editor",
-    "stack": "C#, WinUI 3",
-    "description": "A lightweight, distraction-free multi-tab text editor built for Windows 11 using WinUI 3 and C#. Published to the Microsoft Store via MSIX packaging.",
-    "links": [
-      {
-        "text": "View in MS Store",
-        "url": "https://apps.microsoft.com/detail/9p4dzl11whv5"
-      },
-      {
-        "text": "GitHub",
-        "url": "https://github.com/karthikr06/TabWriter"
-      }
-    ]
   },
   {
     "title": "AI-Powered Discord Assistant",

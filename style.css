@@ -223,6 +223,108 @@ a:hover {
     margin: 2px 0 4px 0;
 }
 
+/* --- FEATURED APP CARDS --- */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.app-card {
+    --app-accent: var(--accent-blue);
+    background-color: #1a1a1a;
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--app-accent);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.app-card:hover {
+    border-color: var(--app-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    text-decoration: none;
+}
+
+.app-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.app-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.app-card h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.app-card .project-stack {
+    margin: 2px 0 0 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.app-tagline {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.app-description {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.app-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.app-highlights li {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 3px 10px;
+}
+
+.app-cta {
+    margin-top: auto;
+    color: var(--app-accent);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.app-card:hover .app-cta i {
+    transform: translateX(3px);
+}
+
+.app-cta i {
+    transition: transform 0.2s ease;
+}
+
 /* --- EXPERIENCE DATE --- */
 .exp-date {
     color: var(--accent-blue-hover);
@@ -413,6 +515,12 @@ a:hover {
 .modal-body::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
 
 /* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1200px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 950px) {
     body {
         flex-direction: column;
@@ -435,7 +543,8 @@ a:hover {
     .modal-header, .modal-body {
         padding: 20px;
     }
-    .blog-grid {
+    .blog-grid,
+    .app-grid {
         grid-template-columns: 1fr;
     }
 }

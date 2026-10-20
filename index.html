@@ -32,11 +32,12 @@
         <main class="main-content">
             <div class="content-wrapper">
                 
+                <!-- Featured Apps (Dynamically Loaded) -->
                 <section>
-                    <h2><span class="binary">000</span> About Me</h2>
-                    <p>
-                        I'm a Computer Science student at VIT Vellore passionate about building native desktop applications, scalable backends, cloud & AI integrated applications. I enjoy working across the full stack—from engineering APIs to integrating LLM workflows.
-                    </p>
+                    <h2><span class="binary">000</span> Featured Apps</h2>
+                    <div id="featured-container" class="app-grid">
+                        <p style="color: var(--text-secondary);">Loading apps...</p>
+                    </div>
                 </section>
 
                 <section>
@@ -60,22 +61,22 @@
                     </ul>
                 </section>
 
+                <!-- Dedicated Projects Section (Dynamically Loaded) -->
+                <section>
+                    <h2><span class="binary">010</span> Projects</h2>
+                    <ul id="projects-container">
+                        <li style="list-style: none; padding-top: 5px; color: var(--text-secondary);">Loading projects...</li>
+                    </ul>
+                </section>
+
                 <!-- Dedicated Experience Section -->
                 <section>
-                    <h2><span class="binary">010</span> Experience</h2>
+                    <h2><span class="binary">011</span> Experience</h2>
                     <ul>
                         <li>
                             <strong>SADA (An Insight Company) — AI & Cloud Intern</strong> <span class="exp-date">Jun – Jul 2026</span><br>
                             Engineered an AI Assistant backend using FastAPI and Google ADK/Vertex AI. Built a React dashboard and executed optimized SQL queries against 130k+ records on Google BigQuery deployed to Cloud Run.
                         </li>
-                    </ul>
-                </section>
-
-                <!-- Dedicated Projects Section (Dynamically Loaded) -->
-                <section>
-                    <h2><span class="binary">011</span> Projects</h2>
-                    <ul id="projects-container">
-                        <li style="list-style: none; padding-top: 5px; color: var(--text-secondary);">Loading projects...</li>
                     </ul>
                 </section>
 
@@ -90,13 +91,6 @@
                     <div id="view-all-container" class="view-all-container" style="display: none;">
                         <button id="open-modal-btn" class="btn-view-all">View All Articles <i class="fa fa-arrow-right"></i></button>
                     </div>
-                </section>
-
-                <section>
-                    <h2><span class="binary">101</span> Future Goals</h2>
-                    <p>
-                        I love building software and want to keep pushing the boundaries of modern application development. My focus is on sharpening my backend engineering skills, designing robust cloud architectures, and leveraging AI tools and LLM workflows to build faster, smarter software. My goal is to craft reliable, high-impact applications that solve real-world problems at scale.
-                    </p>
                 </section>
 
             </div>
