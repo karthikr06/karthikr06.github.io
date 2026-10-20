@@ -18,7 +18,7 @@
     "cta": "Get it from Microsoft Store",
     "icon": "tabwriter.png",
     "accent": "#f59e0b",
-    "tagline": "A distraction-free tabbed text editor.",
+    "tagline": "A minimal tabbed text editor for Windows.",
     "stack": "C#, WinUI 3, Windows App SDK",
     "description": "A lightweight text editor built from scratch for Windows 11. Native tabs, custom fonts, word wrap and quick timestamped backups, all working completely offline.",
     "highlights": ["Native tabs", "Quick backups", "Fully offline"]
