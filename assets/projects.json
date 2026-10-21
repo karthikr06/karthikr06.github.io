@@ -9,7 +9,7 @@
     "tagline": "All your apps, one window.",
     "stack": "C#, .NET 8, WinUI 3, WebView2, SQLite",
     "description": "WhatsApp, Telegram, Discord, Gmail and more, side by side in one native Windows 11 app. Keep work and personal accounts apart, get proper notifications, and set alarms that ring even when the app is closed.",
-    "highlights": ["Separate profiles", "Native notifications", "No data collected"]
+    "highlights": [ "Productivity", "Separate profiles", "Native notifications"]
   },
   {
     "title": "TabWriter",
@@ -21,7 +21,7 @@
     "tagline": "A minimal tabbed text editor for Windows.",
     "stack": "C#, WinUI 3, Windows App SDK",
     "description": "A lightweight text editor built from scratch for Windows 11. Native tabs, custom fonts, word wrap and quick timestamped backups, all working completely offline.",
-    "highlights": ["Native tabs", "Quick backups", "Fully offline"]
+    "highlights": ["Native tabs", "Fully offline", "Simple Text Editor"]
   },
   {
     "title": "SyncViewer",
