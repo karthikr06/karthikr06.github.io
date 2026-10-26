@@ -24,6 +24,7 @@
             <p class="tagline">Welcome to my space!<br>CS Student & Software Developer<br>@ VIT Vellore</p>
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/karthikr06/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+                <a href="#" id="resume-link" target="_blank" title="Resume" style="display: none;"><i class="fa fa-file-text"></i></a>
                 <a href="https://github.com/karthikr06" target="_blank" title="GitHub"><i class="fa fa-github"></i></a>
             </div>
         </aside>
@@ -101,12 +102,27 @@
             <div class="modal-container">
                 <div class="modal-header">
                     <h2><span class="binary">ALL</span> Articles</h2>
-                    <button id="close-modal-btn" class="close-modal-btn"><i class="fa fa-times"></i></button>
+                    <button id="close-modal-btn" class="close-modal-btn" title="Close"><i class="fa fa-times"></i></button>
                 </div>
                 <div class="modal-body">
                     <div id="modal-articles-container" class="blog-grid">
                         <!-- All articles injected here -->
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Resume Modal Popup -->
+        <div id="resume-modal" class="modal-overlay">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h2><span class="binary">CV</span> Resume</h2>
+                    <div class="modal-actions">
+                        <a id="resume-new-tab" href="#" target="_blank" class="btn-view-all">Open<span class="hide-on-mobile"> in new tab</span> <i class="fa fa-external-link"></i></a>
+                        <button class="close-modal-btn" title="Close"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="modal-body resume-body">
+                    <iframe id="resume-frame" class="resume-frame" title="Karthik R - Resume"></iframe>
                 </div>
             </div>
         </div>
