@@ -144,37 +144,67 @@ async function loadArticles() {
     }
 }
 
+// --- RESUME LOGIC ---
+async function loadResume() {
+    const resumeLink = document.getElementById('resume-link');
+    const resumeNewTab = document.getElementById('resume-new-tab');
+    const resumeFrame = document.getElementById('resume-frame');
+    try {
+        const response = await fetch('./assets/profile.json');
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const profile = await response.json();
+
+        resumeLink.href = profile.resumeUrl;
+        resumeNewTab.href = profile.resumeUrl;
+        resumeLink.style.display = '';
+
+        resumeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Load the Drive preview only when the popup is first opened
+            if (!resumeFrame.src) {
+                resumeFrame.src = profile.resumeUrl.replace(/\/view.*$/, '/preview');
+            }
+            openModal(document.getElementById('resume-modal'));
+        });
+    } catch (error) {
+        console.error("Failed to load resume link:", error);
+    }
+}
+
 // --- MODAL EVENT LISTENERS ---
-const modal = document.getElementById('articles-modal');
+function openModal(modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
 const openModalBtn = document.getElementById('open-modal-btn');
-const closeModalBtn = document.getElementById('close-modal-btn');
 
 if (openModalBtn) {
     openModalBtn.addEventListener('click', () => {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        openModal(document.getElementById('articles-modal'));
     });
 }
 
-closeModalBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-});
+document.querySelectorAll('.modal-overlay').forEach(modal => {
+    modal.querySelector('.close-modal-btn').addEventListener('click', () => closeModal(modal));
 
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal(modal);
+    });
 });
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(closeModal);
     }
 });
 
 // Initialize API fetches
 loadProjects();
 loadArticles();
+loadResume();

@@ -514,6 +514,38 @@ a:hover {
 .modal-body::-webkit-scrollbar-track { background: var(--bg-card); }
 .modal-body::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
 
+/* --- RESUME POPUP --- */
+.modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.modal-actions .btn-view-all {
+    padding: 6px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.modal-actions .btn-view-all:hover {
+    text-decoration: none;
+}
+
+.resume-body {
+    padding: 0;
+    overflow: hidden;
+    flex: 1;
+}
+
+.resume-frame {
+    display: block;
+    width: 100%;
+    height: 75vh;
+    border: none;
+    border-radius: 0 0 12px 12px;
+    background: #ffffff;
+}
+
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 1200px) {
     .app-grid {
@@ -542,6 +574,12 @@ a:hover {
     }
     .modal-header, .modal-body {
         padding: 20px;
+    }
+    .resume-body {
+        padding: 0;
+    }
+    .hide-on-mobile {
+        display: none;
     }
     .blog-grid,
     .app-grid {
