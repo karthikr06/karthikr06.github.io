@@ -27,7 +27,12 @@
     "title": "SyncViewer",
     "stack": "React, FastAPI, PostgreSQL (Supabase), Google ADK",
     "description": "A multi-cloud VM monitoring platform with an offline-first React PWA. Runs on a 20-table Postgres schema with row-level security and audit logs, and syncs changes to each browser's IndexedDB cache using version cursors. Includes a Gemini-powered agent you can ask about uptime, plus team workspaces with admin, developer and viewer roles.",
-    "links": []
+    "links": [
+      {
+        "text": "View Code",
+        "url": "https://github.com/karthikr06/syncViewer"
+      }
+    ]
   },
   {
     "title": "AI-Powered Discord Assistant",
